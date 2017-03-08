@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  host: localhost
+  database: is_exercise_development
+  password:
+
+test:
+  <<: *default
+  host: localhost
+  database: is_exercise_test
+  password:
+
+production:
+  <<: *default
+  database: is_exercise_production
+  username: 
+  password: 
