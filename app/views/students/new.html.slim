@@ -15,7 +15,7 @@ h2 Novo Estudante
   br
 
   = f.label :status
-  = f.text_field :status
+  = f.select :status, [["Ativo", Status::ACTIVE], ["Inativo", Status::INATIVE]]
 
   br
 
