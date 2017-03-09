@@ -1,0 +1,20 @@
+h2 Novo Curso
+
+= form_for @course do |f|
+  = f.label :name
+  = f.text_field :name
+
+  br
+
+  = f.label :description
+  = f.text_field :description
+
+  br
+
+  = f.label :status
+  = f.text_field :status
+
+  br
+
+  = f.submit "Salvar"
+
