@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'enumerate_it'
 gem "responders"
 gem "slim-rails"
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
 
 group :development, :test do
   gem 'byebug'

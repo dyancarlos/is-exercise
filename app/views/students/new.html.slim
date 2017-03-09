@@ -1,23 +1,23 @@
-h2 Novo Estudante
+h2 class="ui dividing header" Novo Estudante
 
 = validation @student
 
-= form_for @student do |f|
-  = f.label :name
-  = f.text_field :name
+div class="ui form"
+  = form_for @student do |f|
+    = f.label :name
+    = f.text_field :name
 
-  br
+    br
 
-  = f.label :register_number
-  = f.text_field :register_number
+    = f.label :register_number
+    = f.text_field :register_number
 
-  br
+    br
 
-  = f.label :status
-  = f.select :status, [["Ativo", Status::ACTIVE], ["Inativo", Status::INATIVE]]
+    = f.label :status
+    = f.select :status, [["Ativo", Status::ACTIVE], ["Inativo", Status::INATIVE]]
 
-  br
+    br
 
-  = f.submit "Salvar"
-
+    = f.submit "Salvar", class: "ui button green"
 

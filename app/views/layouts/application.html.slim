@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Exercicio
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta charset="utf-8"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  body
+    div class="ui fixed inverted menu"
+      div class="ui container"
+        = link_to "Novo Curso", :new_course, class: "header item"
+        = link_to "Novo Estudante", :new_student, class: "header item"
+        = link_to "Nova Classe", :new_classroom, class: "header item"
+
+    br
+    br
+    br
+    br
+
+    div class="ui main text container"
+      - unless flash[:notice].blank?
+        div class="ui blue message"
+          = flash[:notice]
+
+      = yield
+

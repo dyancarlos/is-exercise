@@ -1,17 +1,18 @@
-h2 Sala de Aula
+h2 class="ui dividing header" Nova Classe
 
 = validation @classroom
 
-= form_for @classroom do |f|
-  = f.label :student_id
-  = f.select :student_id, Student.all.map { |student| [student.name, student.id] }
+div class="ui form"
+  = form_for @classroom do |f|
+    = f.label :student_id
+    = f.select :student_id, Student.all.map { |student| [student.name, student.id] }
 
-  br
+    br
 
-  = f.label :course_id
-  = f.select :course_id, Course.all.map { |course| [course.name, course.id] }
+    = f.label :course_id
+    = f.select :course_id, Course.all.map { |course| [course.name, course.id] }
 
 
-  br
+    br
 
-  = f.submit "Salvar"
+    = f.submit "Salvar", class: "ui button green"

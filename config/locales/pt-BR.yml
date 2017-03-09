@@ -2,7 +2,7 @@ pt-BR:
   controllers:
     students: "Estudantes"
     courses: "Cursos"
-    classrooms: "Sala de Aula"
+    classrooms: "Classe"
   activerecord:
     models:
       student: "Estudante"
