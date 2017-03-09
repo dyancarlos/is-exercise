@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to :new_course
+      respond_with @course, location: -> { new_course_path }
     else
       render :new
     end
