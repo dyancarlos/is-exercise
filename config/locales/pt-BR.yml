@@ -2,6 +2,7 @@ pt-BR:
   controllers:
     students: "Estudantes"
     courses: "Cursos"
+    classrooms: "Sala de Aula"
   activerecord:
     models:
       student: "Estudante"
@@ -17,4 +18,6 @@ pt-BR:
         description: "Descrição"
         status: "Status"
       classroom:
+        student_id: "Estudante"
+        course_id: "Curso"
         entry_at: "Data da Matrícula"
