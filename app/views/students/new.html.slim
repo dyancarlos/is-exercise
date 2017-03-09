@@ -1,0 +1,23 @@
+h2 Novo Estudante
+
+= flash[:notice]
+
+= form_for @student do |f|
+  = f.label :name
+  = f.text_field :name
+
+  br
+
+  = f.label :register_number
+  = f.text_field :register_number
+
+  br
+
+  = f.label :status
+  = f.text_field :status
+
+  br
+
+  = f.submit "Salvar"
+
+
