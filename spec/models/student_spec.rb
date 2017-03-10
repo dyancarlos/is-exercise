@@ -31,4 +31,14 @@ RSpec.describe Student, type: :model do
 
     expect(Student.get_students).to eq [[student_one.name, student_one.id], [student_two.name, student_two.id]]
   end
+
+  it "status should be active" do
+    student = FactoryGirl.create(:student, status: 1)
+    expect(Status.t(student.status)).to eq "Ativo"
+  end
+
+  it "status should be inative" do
+    student = FactoryGirl.create(:student, status: 0)
+    expect(Status.t(student.status)).to eq "Inativo"
+  end
 end

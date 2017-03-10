@@ -31,4 +31,14 @@ RSpec.describe Course, type: :model do
 
     expect(Course.get_courses).to eq [[course_one.name, course_one.id], [course_two.name, course_two.id]]
   end
+
+  it "status should be active" do
+    course = FactoryGirl.create(:course, status: 1)
+    expect(Status.t(course.status)).to eq "Ativo"
+  end
+
+  it "status should be inative" do
+    course = FactoryGirl.create(:course, status: 0)
+    expect(Status.t(course.status)).to eq "Inativo"
+  end
 end
