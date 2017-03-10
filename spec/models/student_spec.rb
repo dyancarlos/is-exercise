@@ -28,4 +28,11 @@ RSpec.describe Student, type: :model do
   it "should return status" do
     expect(Student.get_status).to eq [["Ativo", 1], ["Inativo", 0]]
   end
+
+  it "should returns all students to be selected on classroom" do
+    student_one = FactoryGirl.create(:student, name: "Joao Paulo")
+    student_two = FactoryGirl.create(:student)
+
+    expect(Student.get_students).to eq [[student_one.name, student_one.id], [student_two.name, student_two.id]]
+  end
 end

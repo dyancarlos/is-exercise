@@ -5,13 +5,12 @@ h2 class="ui dividing header" Nova Classe
 div class="ui form"
   = form_for @classroom do |f|
     = f.label :student_id
-    = f.select :student_id, Student.all.map { |student| [student.name, student.id] }
+    = f.select :student_id, Student.get_students
 
     br
 
     = f.label :course_id
-    = f.select :course_id, Course.all.map { |course| [course.name, course.id] }
-
+    = f.select :course_id, Course.get_courses
 
     br
 
