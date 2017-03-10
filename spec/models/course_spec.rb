@@ -25,10 +25,6 @@ RSpec.describe Course, type: :model do
     end
   end
 
-  it "should return status" do
-    expect(Course.get_status).to eq [["Ativo", 1], ["Inativo", 0]]
-  end
-
   it "should returns all courses to be selected on classroom" do
     course_one = FactoryGirl.create(:course, name: "Geografia")
     course_two = FactoryGirl.create(:course)

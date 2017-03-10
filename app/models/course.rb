@@ -7,8 +7,4 @@ class Course < ActiveRecord::Base
   def self.get_courses
     all.map { |course| [course.name, course.id] }
   end
-
-  def self.get_status
-    [["Ativo", Status::ACTIVE], ["Inativo", Status::INATIVE]]
-  end
 end

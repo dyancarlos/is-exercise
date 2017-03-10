@@ -7,9 +7,11 @@ table class="ui table"
     tr
       th = t("activerecord.attributes.classroom.student_id")
       th = t("activerecord.attributes.classroom.course_id")
+      th = t("activerecord.attributes.classroom.entry_at")
   tbody
     - @classrooms.each do |classroom|
         tr
           td.student_id = classroom.student.name
           td.course_id = classroom.course.name
+          td.entry_at = format_date classroom.entry_at
 

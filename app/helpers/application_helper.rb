@@ -7,4 +7,8 @@ module ApplicationHelper
       content_tag(:div, html, class: "ui error message").html_safe
     end
   end
+
+  def format_date(date)
+    date.strftime("%d/%m/%Y %H:%M")
+  end
 end

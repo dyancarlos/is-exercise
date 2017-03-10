@@ -7,8 +7,4 @@ class Student < ActiveRecord::Base
   def self.get_students
     all.map { |student| [student.name, student.id] }
   end
-
-  def self.get_status
-    [["Ativo", Status::ACTIVE], ["Inativo", Status::INATIVE]]
-  end
 end

@@ -1,4 +1,8 @@
 pt-BR:
+  enumerations:
+    status:
+      active: "Ativo"
+      inative: "Inativo"
   controllers:
     students: "Estudantes"
     courses: "Cursos"
