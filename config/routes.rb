@@ -6,5 +6,5 @@ Rails.application.routes.draw do
             :students,
             :classrooms
 
-  # root 'welcome#index'
+  root 'courses#index'
 end
