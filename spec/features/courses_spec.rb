@@ -2,6 +2,17 @@ require 'rails_helper'
 
 RSpec.describe "Courses Feature", type: :feature do
 
+  it "showing courses" do
+    visit courses_path
+    expect(page).to have_content "Cursos"
+  end
+
+  it "show form courses" do
+    visit courses_path
+    click_link "Criar Curso"
+    expect(page).to have_content "Novo Curso"
+  end
+
   it "create a valid course" do
     visit new_course_path
 

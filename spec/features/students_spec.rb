@@ -2,6 +2,17 @@ require 'rails_helper'
 
 RSpec.describe "Students Feature", type: :feature do
 
+  it "showing students" do
+    visit students_path
+    expect(page).to have_content "Estudantes"
+  end
+
+  it "show form students" do
+    visit students_path
+    click_link "Criar Estudante"
+    expect(page).to have_content "Novo Estudante"
+  end
+
   it "create a valid student" do
     visit new_student_path
 

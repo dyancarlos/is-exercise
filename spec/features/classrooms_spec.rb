@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe "Classrooms Feature", type: :feature do
 
+  it "showing classrooms" do
+    visit classrooms_path
+    expect(page).to have_content "Classes"
+  end
+
   context "with dependencies" do
     it "without course and student should redirect to new course" do
       visit new_classroom_path
