@@ -17,6 +17,7 @@ test:
 
 production:
   <<: *default
-  database: is_exercise_production
+  host: ec2-23-23-93-255.compute-1.amazonaws.com
+  database: dc43l7oc747a8v
   username: cdbtjthgehckiw
   password: e401d5f4e9ec947f50d5d33de9032ce1f7f8ea475eedf36d7f3c5e9306deff2e
