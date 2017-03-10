@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(student_params)
     if @student.save
-      respond_with @student, location: -> { new_student_path }
+      respond_with @student, location: -> { students_path }
     else
       render :new
     end

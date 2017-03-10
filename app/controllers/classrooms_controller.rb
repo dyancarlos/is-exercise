@@ -13,7 +13,7 @@ class ClassroomsController < ApplicationController
   def create
     @classroom = Classroom.new(classroom_params)
     if @classroom.save
-      respond_with @classroom, location: -> { new_classroom_path }
+      respond_with @classroom, location: -> { classrooms_path }
     end
   end
 
