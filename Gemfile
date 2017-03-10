@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.5"
+
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +14,8 @@ gem 'enumerate_it'
 gem "responders"
 gem "slim-rails"
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'

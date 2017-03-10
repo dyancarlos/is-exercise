@@ -18,5 +18,5 @@ test:
 production:
   <<: *default
   database: is_exercise_production
-  username: 
-  password: 
+  username: cdbtjthgehckiw
+  password: e401d5f4e9ec947f50d5d33de9032ce1f7f8ea475eedf36d7f3c5e9306deff2e
