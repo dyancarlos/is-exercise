@@ -7,7 +7,7 @@ pt-BR:
     models:
       student: "Estudante"
       course: "Curso"
-      classroom: "Sala de aula"
+      classroom: "Classe"
     attributes:
       student:
         name: "Nome"
