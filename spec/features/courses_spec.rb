@@ -35,6 +35,28 @@ RSpec.describe "Courses Feature", type: :feature do
     expect(page).to have_content "Descrição não pode ficar em branco"
   end
 
+  it "create with a name longer than 45 characters" do
+    visit new_course_path
+
+    fill_in "Nome", with: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos"
+    fill_in "Descrição", with: "Curso de Ingles"
+    select "Ativo", from: "Status"
+    click_button "Salvar"
+
+    expect(page).to have_content "Nome é muito longo (máximo: 45 caracteres)"
+  end
+
+  it "create with a description longer than 45 characters" do
+    visit new_course_path
+
+    fill_in "Nome", with: "Ingles"
+    fill_in "Descrição", with: "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos"
+    select "Ativo", from: "Status"
+    click_button "Salvar"
+
+    expect(page).to have_content "Descrição é muito longo (máximo: 45 caracteres)"
+  end
+
   it "create with blank fields" do
     visit new_course_path
 
