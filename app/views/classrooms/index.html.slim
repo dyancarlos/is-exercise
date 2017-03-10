@@ -1,0 +1,15 @@
+h2 class="ui dividing header" Classes
+
+= link_to "Criar Classe", :new_classroom, class: "ui blue button"
+
+table class="ui table"
+  thead
+    tr
+      th = t("activerecord.attributes.classroom.student_id")
+      th = t("activerecord.attributes.classroom.course_id")
+  tbody
+    - @classrooms.each do |classroom|
+        tr
+          td.student_id = classroom.student.name
+          td.course_id = classroom.course.name
+

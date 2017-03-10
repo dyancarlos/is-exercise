@@ -1,0 +1,17 @@
+h2 class="ui dividing header" Estudantes
+
+= link_to "Criar Estudante", :new_student, class: "ui blue button"
+
+table class="ui table"
+  thead
+    tr
+      th = t("activerecord.attributes.student.name")
+      th = t("activerecord.attributes.student.register_number")
+      th = t("activerecord.attributes.student.status")
+  tbody
+    - @students.each do |student|
+        tr
+          td.name = student.name
+          td.register_number = student.register_number
+          td.status = student.status
+

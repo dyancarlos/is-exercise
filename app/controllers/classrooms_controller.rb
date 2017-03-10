@@ -2,6 +2,10 @@ class ClassroomsController < ApplicationController
   before_filter :check_if_has_course,
                 :check_if_has_student
 
+  def index
+    @classrooms = Classroom.all
+  end
+
   def new
     @classroom = Classroom.new
   end

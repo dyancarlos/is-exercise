@@ -1,0 +1,16 @@
+h2 class="ui dividing header" Cursos
+
+= link_to "Criar Curso", :new_course, class: "ui blue button"
+
+table class="ui table"
+  thead
+    tr
+      th = t("activerecord.attributes.course.name")
+      th = t("activerecord.attributes.course.description")
+      th = t("activerecord.attributes.course.status")
+  tbody
+    - @courses.each do |course|
+        tr
+          td.name = course.name
+          td.description = course.description
+          td.status = course.status
